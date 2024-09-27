@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*comentario em css*/
+        body {
+            background-color: green;
+        } /*apontando diretamente para a tag*/
+        #ola-mundo {
+            background-color: violet;
+        } /*apontando para o id*/
+
+        .estilo-paragrafo {
+            color: #fff; /*no hexadecimal a disposição das cores é feita por numeros e letras*/
+            font-style: italic;
+            background-color: rgb(00, 00, 90, 0.60); /* no no rgb a intensidade da cor vai do 0 ao 255,sendo elas separadas por vigula. Ja o rgba, tem a quarta opção que vai de 0 a 1, representando a transparencia da cor (0% a 100%)*/
+        }
+    </style>
+</head>
+<body>
+    <!-- isso é um comentario em html-->
+    <h1 id="ola-mundo">Olá mundo!</h1>
+    <h2>Isso é um título!</h2>
+    <h3>Isso é um título!</h3>
+    <h3>Isso é um título!</h3>
+    <h4>Isso é um título!</h4>
+    <h5>Isso é um título!</h5>
+    <H6>Isso é um título!</H6>
+    <p class="estilo-paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/> <!-- br utilizado para quebra de linha-->Omnis, soluta possimus eum dolore ipsum dolores nostrum. Vero a molestiae dignissimos quia esse, corporis molestias voluptas nisi debitis, doloribus natus fugit.</p>
+    <!--propriedade onclick passa o js (alert)-->
+    <button onclick="alert('seja bem vindo')">Click aqui</button>
+</body>
+</html>
