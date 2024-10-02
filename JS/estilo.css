@@ -1,0 +1,39 @@
+/*variaveis no css*/
+:root{
+    --cor-principal: #f00;
+    --cor-secundaria: #000;
+}
+
+/*
+a:link - estilo padrão
+a:visited - estilo visitado
+a:active - estilo quando clicado
+a:hover - estilo quando o cursor do mouse passa por cima
+*/
+
+/*adicionando hierarquia header nav. Com essa hierarquia tudo que estiver dentro das tags header e nav receberão as alterações de estilo*/
+header nav a {
+    color: var(--cor-secundaria);
+    border: 1px solid var(--cor-secundaria);
+    padding: 5px;
+    text-decoration: none; /*retira o sublinhado*/
+
+}
+header nav a.ativo{
+    color: #fff;/* deixa conteudo em vermelho ao passar o mouse */
+    border-color: var(--cor-principal);
+    background-color: var(--cor-principal);
+
+}
+#inicio{
+    min-height: 400px;
+    background-color: aliceblue;
+}
+#quemSomos{
+    min-height: 400px;
+    background-color: bisque;
+}
+#contato{
+    min-height: 400px;
+    background-color: brown;
+}
