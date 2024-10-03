@@ -19,12 +19,12 @@ header nav a {
     text-decoration: none; /*retira o sublinhado*/
 
 }
-header nav a.ativo{
-    color: #fff;/* deixa conteudo em vermelho ao passar o mouse */
+header nav a:hover, header nav a.item-ativo {
+    color: #fff;
     border-color: var(--cor-principal);
     background-color: var(--cor-principal);
-
 }
+
 #inicio{
     min-height: 400px;
     background-color: aliceblue;
@@ -36,4 +36,8 @@ header nav a.ativo{
 #contato{
     min-height: 400px;
     background-color: brown;
+}
+:root {
+    --cor-principal: #1ed89b;
+    --cor-secundaria: #000;
 }
