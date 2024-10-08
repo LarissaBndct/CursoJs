@@ -15,3 +15,18 @@ for(var i = 0; i <=10; i++)
 {
     console.log(` ${i} x 8 = ${i*8}`);
 }
+const readline = require('readline-sync');
+
+const nome = readline.question("Qual o seu nome? ");
+console.log(`O nome informado foi ${nome}`);
+
+// const rl = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
+
+//  rl.question('qual o seu nome?', (resposta) => {
+//      console.log(`o nome informado foi ${resposta}`);
+//     rl.close();
+// });
+
