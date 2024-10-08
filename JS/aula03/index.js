@@ -30,28 +30,28 @@
 //     rl.close();
 // });
 
-var numero = readline.questionFloat("Informe o numero para saber a tabuada: ");
+var numero = readline.questionFloat("Informe o numero para construir a tabuada: ");
 
 var multiplicador = 0;
 console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-multiplicador = multiplicador;
 console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-multiplicador = multiplicador;
 console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-multiplicador = multiplicador;
 console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-multiplicador = multiplicador;
 console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-multiplicador = multiplicador;
 console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-multiplicador = multiplicador;
 console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-multiplicador = multiplicador;
 console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-multiplicador = multiplicador;
 console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-multiplicador = multiplicador;
 console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-multiplicador = multiplicador;
 console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-multiplicador = multiplicador;
+
+//receber 4 notas e calcular a media
+
+var nota1 = readline.questionFloat("Informe a primeira nota: ");
+var nota2 = readline.questionFloat("Informe a segunda nota: ");
+var nota3 = readline.questionFloat("Informe a terceira nota: ");
+var nota4 = readline.questionFloat("Informe a quarta nota: ");
+
+var media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+console.log(`A media das notas informadas é de: ${media}`);
