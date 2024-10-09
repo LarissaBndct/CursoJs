@@ -80,3 +80,18 @@ delete pessoa.cidade;
 pessoa.genero = "Bonito";
 console.log(pessoa);
 console.log(nome);
+
+//lista
+
+const lista = [] // Array ("Lista")
+
+ console.log(lista.pop());
+console.log(lista);
+lista.push("Simboragoraja");
+console.log(lista);
+console.log(lista[2]);
+delete lista[1];
+console.log(lista);
+console.log(lista[1]);
+lista[1] = "Papai Noel";
+console.log(lista);
