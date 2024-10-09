@@ -55,3 +55,28 @@ var nota4 = readline.questionFloat("Informe a quarta nota: ");
 var media = (nota1 + nota2 + nota3 + nota4) / 4;
 
 console.log(`A media das notas informadas é de: ${media}`);
+
+//objeto
+const nome = "Thiago";
+const pessoa = {
+    "nome": "Tafarel Chicotti",
+    "idade": 32,
+    "cidade": "Araraquara",
+    "profissao": "Professor",
+    "endereco" : {
+        "logradouro": "Rua A",
+        "complemento": "Frente",
+        "numero": 548,
+        "bairro": "Jardim Jardinada",
+        "cidade": "Araraquara",
+        "uf": "São Paulo"
+    }
+};
+
+console.log(pessoa.endereco.logradouro);
+pessoa.endereco.logradouro = "Rua Joao Batista";
+console.log(pessoa.endereco.logradouro);
+delete pessoa.cidade;
+pessoa.genero = "Bonito";
+console.log(pessoa);
+console.log(nome);
