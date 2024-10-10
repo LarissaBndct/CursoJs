@@ -30,68 +30,99 @@
 //     rl.close();
 // });
 
-var numero = readline.questionFloat("Informe o numero para construir a tabuada: ");
+// var numero = readline.questionFloat("Informe o numero para construir a tabuada: ");
 
-var multiplicador = 0;
-console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
-console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
+// var multiplicador = 0;
+// console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
+// console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
+// console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
+// console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
+// console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
+// console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
+// console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
+// console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
+// console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
+// console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
+// console.log(` ${numero} x ${multiplicador} = ${numero * multiplicador++ } `);
 
-//receber 4 notas e calcular a media
+// //receber 4 notas e calcular a media
 
-var nota1 = readline.questionFloat("Informe a primeira nota: ");
-var nota2 = readline.questionFloat("Informe a segunda nota: ");
-var nota3 = readline.questionFloat("Informe a terceira nota: ");
-var nota4 = readline.questionFloat("Informe a quarta nota: ");
+// var nota1 = readline.questionFloat("Informe a primeira nota: ");
+// var nota2 = readline.questionFloat("Informe a segunda nota: ");
+// var nota3 = readline.questionFloat("Informe a terceira nota: ");
+// var nota4 = readline.questionFloat("Informe a quarta nota: ");
 
-var media = (nota1 + nota2 + nota3 + nota4) / 4;
+// var media = (nota1 + nota2 + nota3 + nota4) / 4;
 
-console.log(`A media das notas informadas é de: ${media}`);
+// console.log(`A media das notas informadas é de: ${media}`);
 
-//objeto
-const nome = "Thiago";
-const pessoa = {
-    "nome": "Tafarel Chicotti",
-    "idade": 32,
-    "cidade": "Araraquara",
-    "profissao": "Professor",
-    "endereco" : {
-        "logradouro": "Rua A",
-        "complemento": "Frente",
-        "numero": 548,
-        "bairro": "Jardim Jardinada",
-        "cidade": "Araraquara",
-        "uf": "São Paulo"
-    }
-};
+// //objeto
+// const nome = "Thiago";
+// const pessoa = {
+//     "nome": "Tafarel Chicotti",
+//     "idade": 32,
+//     "cidade": "Araraquara",
+//     "profissao": "Professor",
+//     "endereco" : {
+//         "logradouro": "Rua A",
+//         "complemento": "Frente",
+//         "numero": 548,
+//         "bairro": "Jardim Jardinada",
+//         "cidade": "Araraquara",
+//         "uf": "São Paulo"
+//     }
+// };
 
-console.log(pessoa.endereco.logradouro);
-pessoa.endereco.logradouro = "Rua Joao Batista";
-console.log(pessoa.endereco.logradouro);
-delete pessoa.cidade;
-pessoa.genero = "Bonito";
-console.log(pessoa);
-console.log(nome);
+// console.log(pessoa.endereco.logradouro);
+// pessoa.endereco.logradouro = "Rua Joao Batista";
+// console.log(pessoa.endereco.logradouro);
+// delete pessoa.cidade;
+// pessoa.genero = "Bonito";
+// console.log(pessoa);
+// console.log(nome);
 
-//lista
+// //lista
 
-const lista = [] // Array ("Lista")
+// const lista = [] // Array ("Lista")
 
- console.log(lista.pop());
-console.log(lista);
-lista.push("Simboragoraja");
-console.log(lista);
-console.log(lista[2]);
-delete lista[1];
-console.log(lista);
-console.log(lista[1]);
-lista[1] = "Papai Noel";
-console.log(lista);
+// console.log(lista.pop());
+
+// console.log("Seja bem-vindo ao exército!");
+// idade = readline.question("informe sua idade: ");
+
+// //se idade >=18, entao escrever bem-vindo
+
+//     if(idade >= 18)
+// {
+//     console.log("Bem-vindo");
+    
+// }
+// else
+// {
+//     console.log("idade insuficiente");
+// }
+
+//solicite um numero inteiro no terminal e exiba se é par ou impar
+
+numero = readline.question("Informe um numero: ");
+
+if(numero%2 == 0 )
+{
+    console.log(`O numero ${numero} é par!`);
+}
+else
+{
+    console.log(`O numero ${numero} é impar!`);
+}
+
+// media se media for >=6 aprovado
+
+nota1 = readline.questionFloat("Informe a primeira nota: ");
+nota2 = readline.questionFloat("Informe a segunda nota: ");
+nota3 = readline.questionFloat("Informe a terceira nota: ");
+nota4 = readline.questionFloat("Informe a quarta nota: ");
+
+media = (nota1 + nota2 + nota3 + nota4)/ 4;
+
+//if ternario
+media >= 6 ? console.log(`media ${media} status: Aprovado`) : console.log(`média ${media} status Reprovado`);
