@@ -15,7 +15,7 @@
 
 // const nome = readline.question("Qual o seu nome? ");
 // console.log(`O nome informado foi ${nome}`);
-// const idade = parseInt(readline.question("Qual sua idade?")); 
+// const idade = parseInt(readline.question("Qual sua idade?"));
 // console.log(`a idade informada foi ${idade}`);
 
 
@@ -95,7 +95,7 @@
 //     if(idade >= 18)
 // {
 //     console.log("Bem-vindo");
-    
+
 // }
 // else
 // {
@@ -104,25 +104,81 @@
 
 //solicite um numero inteiro no terminal e exiba se é par ou impar
 
-numero = readline.question("Informe um numero: ");
+// numero = readline.question("Informe um numero: ");
 
-if(numero%2 == 0 )
+// if(numero%2 == 0 )
+// {
+//     console.log(`O numero ${numero} é par!`);
+// }
+// else
+// {
+//     console.log(`O numero ${numero} é impar!`);
+// }
+
+// // media se media for >=6 aprovado
+
+// nota1 = readline.questionFloat("Informe a primeira nota: ");
+// nota2 = readline.questionFloat("Informe a segunda nota: ");
+// nota3 = readline.questionFloat("Informe a terceira nota: ");
+// nota4 = readline.questionFloat("Informe a quarta nota: ");
+
+// media = (nota1 + nota2 + nota3 + nota4)/ 4;
+
+// //if ternario
+// media >= 6 ? console.log(`media ${media} status: Aprovado`) : console.log(`média ${media} status Reprovado`);
+
+
+//todo: melhorar mensagem quando totalvenda < 5000
+// var valorDesconto = 0;
+// var taxaDesconto = "";
+
+// totalVenda = readline.questionFloat("Insira o total vendido: ");
+
+// if(totalVenda < 5000)
+// {
+//     valorDesconto = totalVenda;
+//     taxaDesconto = "não houve desconto para o valor informado.";
+// }
+// else if(totalVenda < 10000){
+//     // valorDesconto = totalVenda - (totalVenda * 0.03);
+//     taxaDesconto = "3%";
+// }
+// else if(totalVenda < 15000){
+//     // valorDesconto = totalVenda - (totalVenda * 0.06);
+//     taxaDesconto = "6%";
+// }
+// else{
+//     // valorDesconto = totalVenda - (totalVenda * 0.09);
+//     taxaDesconto = "9%";
+// }
+// valorDesconto = totalVenda - (totalVenda *(parseFloat(taxaDesconto)/100))
+// console.log(`Valor original: ${totalVenda} \nvalor com desconto: ${valorDesconto} \ntaxa de desconto: ${toString(taxaDesconto)}`);
+
+
+var idade = readline.questionInt("Informe a idade: ");
+var mensagem = "";
+if(idade >= 18)
 {
-    console.log(`O numero ${numero} é par!`);
+    var sexo = readline.question("Informe o sexo (f - feminio ou m - Masculino): ").toLowerCase();
+    if(sexo == "m")
+    {
+        mensagem = 'bem-vindo recruta';
+    } 
+    else if(sexo == "f")
+    {
+        var alistar = readline.question("Deseja se alistar? (s - sim ou n - não)").toLowerCase();
+        if(alistar == "s")
+        {
+            mensagem = "bem-vindo guerreira.";
+        }
+        else
+        {
+            mensagem = "Obrigado";
+        }
+    }
 }
 else
 {
-    console.log(`O numero ${numero} é impar!`);
+    mensagem = "É preciso ter mais de 18 anos para se alistar";
 }
-
-// media se media for >=6 aprovado
-
-nota1 = readline.questionFloat("Informe a primeira nota: ");
-nota2 = readline.questionFloat("Informe a segunda nota: ");
-nota3 = readline.questionFloat("Informe a terceira nota: ");
-nota4 = readline.questionFloat("Informe a quarta nota: ");
-
-media = (nota1 + nota2 + nota3 + nota4)/ 4;
-
-//if ternario
-media >= 6 ? console.log(`media ${media} status: Aprovado`) : console.log(`média ${media} status Reprovado`);
+console.log(mensagem);
