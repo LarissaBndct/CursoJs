@@ -199,15 +199,29 @@
 //     }
 // }
 
-for(var contador = 0; contador < 5; contador++)
+// for(var contador = 0; contador < 5; contador++)
+// {
+//     numero = readline.questionFloat("Informe um numero: ");
+//     if(numero % 2 == 0)
+//     {
+//         console.log("Esse numero é par");
+//     }
+//     else
+//     {
+//         console.log("Esse numero é ímpar");
+//     }
+// }
+
+var contador = 0;
+
+while(contador < 5)
 {
-    numero = readline.questionFloat("Informe um numero: ");
-    if(numero % 2 == 0)
-    {
-        console.log("Esse numero é par");
-    }
-    else
-    {
-        console.log("Esse numero é ímpar");
-    }
+    console.log(contador);
+    contador++;
 }
+console.log("Agora com o while: ")
+
+do{
+    console.log(contador)
+    contador--;
+}while(contador > 0)
