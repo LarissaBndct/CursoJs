@@ -163,7 +163,7 @@
 //     if(sexo == "m")
 //     {
 //         mensagem = 'bem-vindo recruta';
-//     } 
+//     }
 //     else if(sexo == "f")
 //     {
 //         var alistar = readline.question("Deseja se alistar? (s - sim ou n - não)").toLowerCase();
@@ -190,11 +190,24 @@
 //     console.log(`${numero} x ${contador} = ${numero * contador}`);
 // }
 
-for(var tabuada = 1; tabuada <=10; tabuada ++)
+// for(var tabuada = 1; tabuada <=10; tabuada ++)
+// {
+//     console.log("\n");
+//     for(multiplicador = 0; multiplicador <= 10; multiplicador++)
+//     {
+//         console.log(`${tabuada} x ${multiplicador} = ${tabuada * multiplicador}`);
+//     }
+// }
+
+for(var contador = 0; contador < 5; contador++)
 {
-    console.log("\n");
-    for(multiplicador = 0; multiplicador <= 10; multiplicador++)
+    numero = readline.questionFloat("Informe um numero: ");
+    if(numero % 2 == 0)
     {
-        console.log(`${tabuada} x ${multiplicador} = ${tabuada * multiplicador}`);
+        console.log("Esse numero é par");
+    }
+    else
+    {
+        console.log("Esse numero é ímpar");
     }
 }
