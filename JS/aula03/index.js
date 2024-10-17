@@ -155,30 +155,46 @@
 // console.log(`Valor original: ${totalVenda} \nvalor com desconto: ${valorDesconto} \ntaxa de desconto: ${toString(taxaDesconto)}`);
 
 
-var idade = readline.questionInt("Informe a idade: ");
-var mensagem = "";
-if(idade >= 18)
+// var idade = readline.questionInt("Informe a idade: ");
+// var mensagem = "";
+// if(idade >= 18)
+// {
+//     var sexo = readline.question("Informe o sexo (f - feminio ou m - Masculino): ").toLowerCase();
+//     if(sexo == "m")
+//     {
+//         mensagem = 'bem-vindo recruta';
+//     } 
+//     else if(sexo == "f")
+//     {
+//         var alistar = readline.question("Deseja se alistar? (s - sim ou n - não)").toLowerCase();
+//         if(alistar == "s")
+//         {
+//             mensagem = "bem-vindo guerreira.";
+//         }
+//         else
+//         {
+//             mensagem = "Obrigado";
+//         }
+//     }
+// }
+// else
+// {
+//     mensagem = "É preciso ter mais de 18 anos para se alistar";
+// }
+// console.log(mensagem);
+
+// numero = readline.questionInt("Informe o numero para calcular a tabuada: ");
+
+// for(var contador = 0; contador <=10; contador++ )
+// {
+//     console.log(`${numero} x ${contador} = ${numero * contador}`);
+// }
+
+for(var tabuada = 1; tabuada <=10; tabuada ++)
 {
-    var sexo = readline.question("Informe o sexo (f - feminio ou m - Masculino): ").toLowerCase();
-    if(sexo == "m")
+    console.log("\n");
+    for(multiplicador = 0; multiplicador <= 10; multiplicador++)
     {
-        mensagem = 'bem-vindo recruta';
-    } 
-    else if(sexo == "f")
-    {
-        var alistar = readline.question("Deseja se alistar? (s - sim ou n - não)").toLowerCase();
-        if(alistar == "s")
-        {
-            mensagem = "bem-vindo guerreira.";
-        }
-        else
-        {
-            mensagem = "Obrigado";
-        }
+        console.log(`${tabuada} x ${multiplicador} = ${tabuada * multiplicador}`);
     }
 }
-else
-{
-    mensagem = "É preciso ter mais de 18 anos para se alistar";
-}
-console.log(mensagem);
