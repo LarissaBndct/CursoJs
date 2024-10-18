@@ -226,20 +226,36 @@
 //     contador--;
 // }while(contador > 0)
 
-var soma = 0;
+// var soma = 0;
+// do
+// {
+//     var numero = readline.questionInt("Insira um numero: ");
+//     soma += numero;
+// }while(soma < 100);
+// console.log(soma);
+
+// console.log("Com o while");
+
+// somaWhile = 0;
+// while(somaWhile < 100)
+// {
+//     var numeroWhile = readline.questionInt("Insira um numero: ");
+//     somaWhile += numeroWhile;
+// }
+// console.log(somaWhile);
+var contador = 0;
 do
 {
-    var numero = readline.questionInt("Insira um numero: ");
-    soma += numero;
-}while(soma < 100);
-console.log(soma);
+    senha = readline.question("Insira a senha ");
 
-console.log("Com o while");
-
-somaWhile = 0;
-while(somaWhile < 100)
-{
-    var numeroWhile = readline.questionInt("Insira um numero: ");
-    somaWhile += numeroWhile;
-}
-console.log(somaWhile);
+    if(senha != "senh@123")
+    {
+        console.log(`Senha incorreta!`);
+    }
+    contador++;
+    if(contador > 5)
+    {
+        console.log("Tentativas esgotaram, encerrando programa...");
+        break;
+    }
+}while(senha != "senh@123");
