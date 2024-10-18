@@ -212,16 +212,26 @@
 //     }
 // }
 
-var contador = 0;
+// var contador = 0;
 
-while(contador < 5)
+// while(contador < 5)
+// {
+//     console.log(contador);
+//     contador++;
+// }
+// console.log("Agora com o while: ")
+
+// do{
+//     console.log(contador)
+//     contador--;
+// }while(contador > 0)
+
+soma = 0;
+contador = 0;
+do
 {
-    console.log(contador);
+    numero = readline.questionInt("Insira um numero: ");
+    soma += numero;
     contador++;
-}
-console.log("Agora com o while: ")
-
-do{
-    console.log(contador)
-    contador--;
-}while(contador > 0)
+}while(soma < 100);
+console.log(soma);
