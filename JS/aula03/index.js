@@ -229,7 +229,17 @@
 var soma = 0;
 do
 {
-    numero = readline.questionInt("Insira um numero: ");
+    var numero = readline.questionInt("Insira um numero: ");
     soma += numero;
 }while(soma < 100);
 console.log(soma);
+
+console.log("Com o while");
+
+somaWhile = 0;
+while(somaWhile < 100)
+{
+    var numeroWhile = readline.questionInt("Insira um numero: ");
+    somaWhile += numeroWhile;
+}
+console.log(somaWhile);
