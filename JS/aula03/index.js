@@ -226,12 +226,10 @@
 //     contador--;
 // }while(contador > 0)
 
-soma = 0;
-contador = 0;
+var soma = 0;
 do
 {
     numero = readline.questionInt("Insira um numero: ");
     soma += numero;
-    contador++;
 }while(soma < 100);
 console.log(soma);
