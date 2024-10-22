@@ -278,4 +278,10 @@ function DizOlaMundo(){
     console.log("Olá mundo!");
 }
 
-DizOlaMundo()
+DizOlaMundo();
+
+function dizOla(nome){
+    console.log(`Olá ${nome}`);
+}
+
+dizOla("juvenal");
