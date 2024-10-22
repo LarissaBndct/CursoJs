@@ -362,8 +362,6 @@ const somatorio = function(num1, num2)
 }
 console.log(somatorio(3,5));
 
-const somaria = (numero1, numero2) => numero1 + numero2; //só funciona quando a função tiver só uma linha
-
 //funcao flecha/ arrow function permite suprimir informacoes para tornar o codigo mais limpo
 
 const quadratica = numero => numero * numero; //numero virou um parametro
@@ -372,7 +370,16 @@ function(numero) {
 return numero * numero;
 }
 */
+
+//variaçoes arrow function
 console.log(quadratica(5));
+const somaria = (numero1, numero2) => numero1 + numero2; //só funciona quando a função tiver só uma linha
+const somaVariasLinhas = (numero1, numero2) => {
+    console.log("O primeiro número informado foi:", numero1);
+    console.log("O segundo número informado foi:", numero2);
+    return numero1 + numero2;
+}
+console.log(somaVariasLinhas(8,10));
 
 //callback é quando passa uma funcao como parametro
 function ExibirProximoNumero(numero, proximoFn)
@@ -389,3 +396,8 @@ const proximo = function (numero) {
 exibirProximoNumero(33, function (numero) { 
     return numero + 1;
 });
+
+const soma = (n1, n2) => n1 + n2;
+const subtracao = (n1, n2) => n1 - n2;
+const multiplicacao = (n1, n2) => n1 * n2;
+const divisao = (n1, n2) => n1 / n2;
