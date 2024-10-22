@@ -274,19 +274,61 @@
 
 //funcao 
 
-function DizOlaMundo(){
-    console.log("Olá mundo!");
-}
+// function DizOlaMundo(){
+//     console.log("Olá mundo!");
+// }
 
-DizOlaMundo();
+// DizOlaMundo();
 
-function dizOla(nome, sobrenome){
-    console.log(`Olá ${nome} ${sobrenome}`);
-}
-function definirNomeCompleto(nome, sobrenome)
+// function dizOla(nome, sobrenome){
+//     console.log(`Olá ${nome} ${sobrenome}`);
+// }
+// function definirNomeCompleto(nome, sobrenome)
+// {
+//     return `${nome} ${sobrenome}`;
+// }
+// const nome = definirNomeCompleto("maria", "das dores");
+// console.log(nome);
+// dizOla("juvenal", "silva");
+
+function soma(num1, num2)
 {
-    return `${nome} ${sobrenome}`;
+    return num1 + num2;
 }
-const nome = definirNomeCompleto("maria", "das dores");
-console.log(nome);
-dizOla("juvenal", "silva");
+function subtracao(num1, num2)
+{
+    return num1 - num2;
+}
+function multiplicacao(num1, num2)
+{
+    return num1 * num2;
+}
+function divisao(num1, num2)
+{
+    return num1 / num2;
+}
+
+let operacao = readline.question("Selecione a operacao: \n+ : soma \n- : subtracao \n* : multiplicacao \n/ : divisao ");
+let num1 = readline.questionFloat("Digite o primeiro numero da operacao ");
+let num2 = readline.questionFloat("Digite o segundo numeor da operacao ");
+
+if(operacao == "+")
+{
+    console.log(`resultado: ${soma(num1, num2)}`);
+}
+else if(operacao == "-")
+{
+    console.log(`resultado: ${subtracao(num1, num2)}`);
+}
+else if(operacao == "*")
+{
+    console.log(`resultado: ${multiplicacao(num1, num2)}`);
+}
+else if(operacao == "/")
+{
+    console.log(`resultado: ${divisao(num1, num2)}`);
+}
+else
+{
+    console.log("Opção invalida")
+}
