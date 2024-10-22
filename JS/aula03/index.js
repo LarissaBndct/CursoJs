@@ -291,6 +291,8 @@
 // console.log(nome);
 // dizOla("juvenal", "silva");
 
+
+//funcao padrao ou nominal
 function soma(num1, num2)
 {
     return num1 + num2;
