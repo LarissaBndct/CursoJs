@@ -243,19 +243,39 @@
 //     somaWhile += numeroWhile;
 // }
 // console.log(somaWhile);
-var contador = 0;
-do
-{
-    senha = readline.question("Insira a senha ");
+// var contador = 0;
+// do
+// {
+//     senha = readline.question("Insira a senha ");
 
-    if(senha != "senh@123")
-    {
-        console.log(`Senha incorreta!`);
-    }
-    contador++;
-    if(contador > 5)
-    {
-        console.log("Tentativas esgotaram, encerrando programa...");
-        break;
-    }
-}while(senha != "senh@123");
+//     if(senha != "senh@123")
+//     {
+//         console.log(`Senha incorreta!`);
+//     }
+//     contador++;
+//     if(contador > 5)
+//     {
+//         console.log("Tentativas esgotaram, encerrando programa...");
+//         break;
+//     }
+// }while(senha != "senh@123");
+
+// //objeto 
+// const objeto = {
+//     "nome_banco_dados": "BDSenai",
+//     "usuario": "usuarioPai",
+//     "senha": "mechamadelorde"
+// }
+
+
+// if ("usuario" in objeto) {
+//     console.log(`Campo: usuario | Valor: ${objeto["usuario"]}`);
+// }
+
+//funcao 
+
+function DizOlaMundo(){
+    console.log("Olá mundo!");
+}
+
+DizOlaMundo()
