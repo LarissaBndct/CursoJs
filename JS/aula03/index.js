@@ -283,5 +283,10 @@ DizOlaMundo();
 function dizOla(nome, sobrenome){
     console.log(`Olá ${nome} ${sobrenome}`);
 }
-
+function definirNomeCompleto(nome, sobrenome)
+{
+    return `${nome} ${sobrenome}`;
+}
+const nome = definirNomeCompleto("maria", "das dores");
+console.log(nome);
 dizOla("juvenal", "silva");
