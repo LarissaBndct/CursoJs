@@ -309,24 +309,33 @@ function divisao(num1, num2)
 }
 
 let operacao = readline.question("Selecione a operacao: \n+ : soma \n- : subtracao \n* : multiplicacao \n/ : divisao ");
-let num1 = readline.questionFloat("Digite o primeiro numero da operacao ");
-let num2 = readline.questionFloat("Digite o segundo numeor da operacao ");
 
-if(operacao == "+")
+let ehOperacao = operacao == "+" && operacao == "-" && operacao == "*" && operacao == "/";
+
+if(ehOperacao)
 {
-    console.log(`resultado: ${soma(num1, num2)}`);
-}
-else if(operacao == "-")
-{
-    console.log(`resultado: ${subtracao(num1, num2)}`);
-}
-else if(operacao == "*")
-{
-    console.log(`resultado: ${multiplicacao(num1, num2)}`);
-}
-else if(operacao == "/")
-{
-    console.log(`resultado: ${divisao(num1, num2)}`);
+    let num1 = readline.questionFloat("Digite o primeiro numero da operacao ");
+    let num2 = readline.questionFloat("Digite o segundo numeor da operacao ");
+    if(operacao == "+")
+    {
+        console.log(`resultado: ${soma(num1, num2)}`);
+    }
+    else if(operacao == "-")
+    {
+        console.log(`resultado: ${subtracao(num1, num2)}`);
+    }
+    else if(operacao == "*")
+    {
+        console.log(`resultado: ${multiplicacao(num1, num2)}`);
+    }
+    else if(operacao == "/")
+    {
+        console.log(`resultado: ${divisao(num1, num2)}`);
+    }
+    else
+    {
+        console.log("Opção invalida")
+    }
 }
 else
 {
