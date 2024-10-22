@@ -308,36 +308,45 @@ function divisao(num1, num2)
     return num1 / num2;
 }
 
-let operacao = readline.question("Selecione a operacao: \n+ : soma \n- : subtracao \n* : multiplicacao \n/ : divisao ");
+let operacao = "";
 
-let ehOperacao = operacao == "+" && operacao == "-" && operacao == "*" && operacao == "/";
+do{
+    operacao = readline.question("\nSelecione a operacao: \n+ : soma \n- : subtracao \n* : multiplicacao \n/ : divisao \nou digite 's' para sair\n");
 
-if(ehOperacao)
-{
-    let num1 = readline.questionFloat("Digite o primeiro numero da operacao ");
-    let num2 = readline.questionFloat("Digite o segundo numeor da operacao ");
-    if(operacao == "+")
+    let ehOperacao = operacao == "+" || operacao == "-" || operacao == "*" || operacao == "/";
+    
+    if(ehOperacao)
     {
-        console.log(`resultado: ${soma(num1, num2)}`);
+        let num1 = readline.questionFloat("Digite o primeiro numero da operacao ");
+        let num2 = readline.questionFloat("Digite o segundo numeor da operacao ");
+        if(operacao == "+")
+        {
+            console.log(`resultado: ${soma(num1, num2)}`);
+        }
+        else if(operacao == "-")
+        {
+            console.log(`resultado: ${subtracao(num1, num2)}`);
+        }
+        else if(operacao == "*")
+        {
+            console.log(`resultado: ${multiplicacao(num1, num2)}`);
+        }
+        else if(operacao == "/")
+        {
+            console.log(`resultado: ${divisao(num1, num2)}`);
+        }
+        else
+        {
+            console.log("Opção invalida \n")
+        }
     }
-    else if(operacao == "-")
+    else if(operacao == 's')
     {
-        console.log(`resultado: ${subtracao(num1, num2)}`);
-    }
-    else if(operacao == "*")
-    {
-        console.log(`resultado: ${multiplicacao(num1, num2)}`);
-    }
-    else if(operacao == "/")
-    {
-        console.log(`resultado: ${divisao(num1, num2)}`);
+        break;
     }
     else
     {
-        console.log("Opção invalida")
+        console.log("Opção invalida \n")
     }
-}
-else
-{
-    console.log("Opção invalida")
-}
+    
+}while(operacao != "s");
