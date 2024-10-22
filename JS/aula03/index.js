@@ -352,3 +352,40 @@ do{
     }
     
 }while(operacao != "s");
+
+
+//funcao atribuida\anonima não tem nome expecifico - normalmente é utilizada em callback (funcao chamada no fim de outra funcao)
+
+const somatorio = function(num1, num2)
+{
+    return num1 + num2;
+}
+console.log(somatorio(3,5));
+
+const somaria = (numero1, numero2) => numero1 + numero2; //só funciona quando a função tiver só uma linha
+
+//funcao flecha/ arrow function permite suprimir informacoes para tornar o codigo mais limpo
+
+const quadratica = numero => numero * numero; //numero virou um parametro
+/* é uma versao enxuta da seguinte funcao :
+function(numero) {
+return numero * numero;
+}
+*/
+console.log(quadratica(5));
+
+//callback é quando passa uma funcao como parametro
+function ExibirProximoNumero(numero, proximoFn)
+{
+    console.log("O numero atual é: ",numero);
+    const proximoNumeroRecebido = proximoFn(numero);
+    console.log(`o proximo numero é ${proximoNumeroRecebido}`);
+}
+
+const proximo = function (numero) { 
+    return numero + 1;
+}
+
+exibirProximoNumero(33, function (numero) { 
+    return numero + 1;
+});
