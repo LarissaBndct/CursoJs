@@ -402,22 +402,16 @@
 // const multiplicacao = (n1, n2) => n1 * n2;
 // const divisao = (n1, n2) => n1 / n2; 
 
-const solicitaNumeros = function(){
-    const num1 = readline.question("Insira o primeiro numero: ");
-    const num2 = readline.question("Insira o segundo numero: ");
-    const num3 = readline.question("insira o terceiro numero: ");
-
-    return console.log(`numeros inseridos: ${num1}, ${num2}, ${num3}`);
-}
-solicitaNumeros();
+const numAquinta = readline.question("Insira um numero para elevar a quinta potencia: ");
+const num1 = readline.question("Insira o segundo numero: ");
+const num2 = readline.question("insira o terceiro numero: ");
 
 const elevadoAquinta = function(numero)
 {
     const resultado = numero**5;
     return console.log(`resultado ${resultado}`);
 }
-const num = readline.question("Insira um numero para elevar a quinta potencia");
-elevadoAquinta(num);
+elevadoAquinta(numAquinta);
 
 const EhMaior = function(num1, num2)
 {
@@ -434,7 +428,5 @@ const EhMaior = function(num1, num2)
         console.log(`${num1} e ${num2} sao iguais`);
     }
 }
-const valor1 = readline.questionInt("Insira o primeiro numero: ");
-const valor2 = readline.questionInt("Insira o segundo numero ");
 
-EhMaior(valor1,valor2);
+EhMaior(num1,num2);
