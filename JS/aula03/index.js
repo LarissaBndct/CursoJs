@@ -293,111 +293,148 @@
 
 
 //funcao padrao ou nominal
-function soma(num1, num2)
-{
-    return num1 + num2;
-}
-function subtracao(num1, num2)
-{
-    return num1 - num2;
-}
-function multiplicacao(num1, num2)
-{
-    return num1 * num2;
-}
-function divisao(num1, num2)
-{
-    return num1 / num2;
-}
+// function soma(num1, num2)
+// {
+//     return num1 + num2;
+// }
+// function subtracao(num1, num2)
+// {
+//     return num1 - num2;
+// }
+// function multiplicacao(num1, num2)
+// {
+//     return num1 * num2;
+// }
+// function divisao(num1, num2)
+// {
+//     return num1 / num2;
+// }
 
-let operacao = "";
+// let operacao = "";
 
-do{
-    operacao = readline.question("\nSelecione a operacao: \n+ : soma \n- : subtracao \n* : multiplicacao \n/ : divisao \nou digite 's' para sair\n");
+// do{
+//     operacao = readline.question("\nSelecione a operacao: \n+ : soma \n- : subtracao \n* : multiplicacao \n/ : divisao \nou digite 's' para sair\n");
 
-    let ehOperacao = operacao == "+" || operacao == "-" || operacao == "*" || operacao == "/";
+//     let ehOperacao = operacao == "+" || operacao == "-" || operacao == "*" || operacao == "/";
     
-    if(ehOperacao)
-    {
-        let num1 = readline.questionFloat("Digite o primeiro numero da operacao ");
-        let num2 = readline.questionFloat("Digite o segundo numeor da operacao ");
-        if(operacao == "+")
-        {
-            console.log(`resultado: ${soma(num1, num2)}`);
-        }
-        else if(operacao == "-")
-        {
-            console.log(`resultado: ${subtracao(num1, num2)}`);
-        }
-        else if(operacao == "*")
-        {
-            console.log(`resultado: ${multiplicacao(num1, num2)}`);
-        }
-        else if(operacao == "/")
-        {
-            console.log(`resultado: ${divisao(num1, num2)}`);
-        }
-        else
-        {
-            console.log("Opção invalida \n")
-        }
-    }
-    else if(operacao == 's')
-    {
-        break;
-    }
-    else
-    {
-        console.log("Opção invalida \n")
-    }
+//     if(ehOperacao)
+//     {
+//         let num1 = readline.questionFloat("Digite o primeiro numero da operacao ");
+//         let num2 = readline.questionFloat("Digite o segundo numeor da operacao ");
+//         if(operacao == "+")
+//         {
+//             console.log(`resultado: ${soma(num1, num2)}`);
+//         }
+//         else if(operacao == "-")
+//         {
+//             console.log(`resultado: ${subtracao(num1, num2)}`);
+//         }
+//         else if(operacao == "*")
+//         {
+//             console.log(`resultado: ${multiplicacao(num1, num2)}`);
+//         }
+//         else if(operacao == "/")
+//         {
+//             console.log(`resultado: ${divisao(num1, num2)}`);
+//         }
+//         else
+//         {
+//             console.log("Opção invalida \n")
+//         }
+//     }
+//     else if(operacao == 's')
+//     {
+//         break;
+//     }
+//     else
+//     {
+//         console.log("Opção invalida \n")
+//     }
     
-}while(operacao != "s");
+// }while(operacao != "s");
 
 
-//funcao atribuida\anonima não tem nome expecifico - normalmente é utilizada em callback (funcao chamada no fim de outra funcao)
+// //funcao atribuida\anonima não tem nome expecifico - normalmente é utilizada em callback (funcao chamada no fim de outra funcao)
 
-const somatorio = function(num1, num2)
+// const somatorio = function(num1, num2)
+// {
+//     return num1 + num2;
+// }
+// console.log(somatorio(3,5));
+
+// //funcao flecha/ arrow function permite suprimir informacoes para tornar o codigo mais limpo
+
+// const quadratica = numero => numero * numero; //numero virou um parametro
+// /* é uma versao enxuta da seguinte funcao :
+// function(numero) {
+// return numero * numero;
+// }
+// */
+
+// //variaçoes arrow function
+// console.log(quadratica(5));
+// const somaria = (numero1, numero2) => numero1 + numero2; //só funciona quando a função tiver só uma linha
+// const somaVariasLinhas = (numero1, numero2) => {
+//     console.log("O primeiro número informado foi:", numero1);
+//     console.log("O segundo número informado foi:", numero2);
+//     return numero1 + numero2;
+// }
+// console.log(somaVariasLinhas(8,10));
+
+// //callback é quando passa uma funcao como parametro
+// function ExibirProximoNumero(numero, proximoFn)
+// {
+//     console.log("O numero atual é: ",numero);
+//     const proximoNumeroRecebido = proximoFn(numero);
+//     console.log(`o proximo numero é ${proximoNumeroRecebido}`);
+// }
+
+// const proximo = function (numero) { 
+//     return numero + 1;
+// }
+
+// exibirProximoNumero(33, function (numero) { 
+//     return numero + 1;
+// });
+
+// const soma = (n1, n2) => n1 + n2;
+// const subtracao = (n1, n2) => n1 - n2;
+// const multiplicacao = (n1, n2) => n1 * n2;
+// const divisao = (n1, n2) => n1 / n2; 
+
+const solicitaNumeros = function(){
+    const num1 = readline.question("Insira o primeiro numero: ");
+    const num2 = readline.question("Insira o segundo numero: ");
+    const num3 = readline.question("insira o terceiro numero: ");
+
+    return console.log(`numeros inseridos: ${num1}, ${num2}, ${num3}`);
+}
+solicitaNumeros();
+
+const elevadoAquinta = function(numero)
 {
-    return num1 + num2;
+    const resultado = numero**5;
+    return console.log(`resultado ${resultado}`);
 }
-console.log(somatorio(3,5));
+const num = readline.question("Insira um numero para elevar a quinta potencia");
+elevadoAquinta(num);
 
-//funcao flecha/ arrow function permite suprimir informacoes para tornar o codigo mais limpo
-
-const quadratica = numero => numero * numero; //numero virou um parametro
-/* é uma versao enxuta da seguinte funcao :
-function(numero) {
-return numero * numero;
-}
-*/
-
-//variaçoes arrow function
-console.log(quadratica(5));
-const somaria = (numero1, numero2) => numero1 + numero2; //só funciona quando a função tiver só uma linha
-const somaVariasLinhas = (numero1, numero2) => {
-    console.log("O primeiro número informado foi:", numero1);
-    console.log("O segundo número informado foi:", numero2);
-    return numero1 + numero2;
-}
-console.log(somaVariasLinhas(8,10));
-
-//callback é quando passa uma funcao como parametro
-function ExibirProximoNumero(numero, proximoFn)
+const EhMaior = function(num1, num2)
 {
-    console.log("O numero atual é: ",numero);
-    const proximoNumeroRecebido = proximoFn(numero);
-    console.log(`o proximo numero é ${proximoNumeroRecebido}`);
+    if(num1 > num2)
+    {
+        console.log(`${num1} é maior`);
+    }
+    else if(num2 > num1)
+    {
+        console.log(`${num2} é maior`);
+    }
+    else if(num1 == num2)
+    {
+        console.log(`${num1} e ${num2} sao iguais`);
+    }
 }
+const valor1 = readline.questionInt("Insira o primeiro numero: ");
+const valor2 = readline.questionInt("Insira o segundo numero ");
 
-const proximo = function (numero) { 
-    return numero + 1;
-}
-
-exibirProximoNumero(33, function (numero) { 
-    return numero + 1;
-});
-
-const soma = (n1, n2) => n1 + n2;
-const subtracao = (n1, n2) => n1 - n2;
-const multiplicacao = (n1, n2) => n1 * n2;
-const divisao = (n1, n2) => n1 / n2;
+EhMaior(valor1,valor2);
