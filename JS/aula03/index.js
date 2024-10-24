@@ -432,21 +432,43 @@
 // EhMaior(num1,num2);
 
 //arrays
-const frutas = ["maçã", "banana", "laranja"];
-console.log(frutas);
-console.log(frutas[1]);
-frutas[1] = "uva";
-console.log(frutas);
-console.log(frutas.length);
-// prop length = Tamanho / Quantidade de Itens
+// const frutas = ["maçã", "banana", "laranja"];
+// console.log(frutas);
+// console.log(frutas[1]);
+// frutas[1] = "uva";
+// console.log(frutas);
+// console.log(frutas.length);
+// // prop length = Tamanho / Quantidade de Itens
 
-frutas.push(1510, 15, 949);
-// fn push = Inserir elementos na última posição do array
+// frutas.push(1510, 15, 949);
+// // fn push = Inserir elementos na última posição do array
 
-frutas.unshift("melancia");
-// fn unshif = Inserir elementos na primeira posição do array
+// frutas.unshift("melancia");
+// // fn unshif = Inserir elementos na primeira posição do array
 
-console.log(frutas);
+// console.log(frutas);
 
-console.log(frutas.slice(2,4));
-// fn slice = Recorta a lista
+// console.log(frutas.slice(2,4));
+// // fn slice = Recorta a lista
+
+const feriados = [];
+
+feriados.push("carnaval");
+feriados.push("pascoa");
+feriados.push("Dia do trabalhador");
+feriados.push("Tiradentes");
+
+console.log(feriados);
+
+feriados.shift("pascoa");
+console.log(feriados);
+feriados.shift("Dia do trabalhador");
+
+const nome = "Juvenal Juvelino Juvenio de Souza";
+nome.toUpperCase(); // Transformar em Letras Maiúsculas
+nome.toLowerCase(); // Transformar em Letras Mínúsculas
+nome.length // Tamanho do texto.
+//nome.split(); // Dividir o texto em um Array.
+console.log(nome.startsWith("Ju")); // Começando com (Retorna true/false)
+console.log(nome.endsWith("za")); // Terminando com (Retorna true/false)
+console.log(nome.includes("Geronimo")); // Procura o texto no meio da frase
