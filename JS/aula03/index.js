@@ -402,31 +402,51 @@
 // const multiplicacao = (n1, n2) => n1 * n2;
 // const divisao = (n1, n2) => n1 / n2; 
 
-const numAquinta = readline.question("Insira um numero para elevar a quinta potencia: ");
-const num1 = readline.question("Insira o segundo numero: ");
-const num2 = readline.question("insira o terceiro numero: ");
+// const numAquinta = readline.question("Insira um numero para elevar a quinta potencia: ");
+// const num1 = readline.question("Insira o segundo numero: ");
+// const num2 = readline.question("insira o terceiro numero: ");
 
-const elevadoAquinta = function(numero)
-{
-    const resultado = numero**5;
-    return console.log(`resultado ${resultado}`);
-}
-elevadoAquinta(numAquinta);
+// const elevadoAquinta = function(numero)
+// {
+//     const resultado = numero**5;
+//     return console.log(`resultado ${resultado}`);
+// }
+// elevadoAquinta(numAquinta);
 
-const EhMaior = function(num1, num2)
-{
-    if(num1 > num2)
-    {
-        console.log(`${num1} é maior`);
-    }
-    else if(num2 > num1)
-    {
-        console.log(`${num2} é maior`);
-    }
-    else if(num1 == num2)
-    {
-        console.log(`${num1} e ${num2} sao iguais`);
-    }
-}
+// const EhMaior = function(num1, num2)
+// {
+//     if(num1 > num2)
+//     {
+//         console.log(`${num1} é maior`);
+//     }
+//     else if(num2 > num1)
+//     {
+//         console.log(`${num2} é maior`);
+//     }
+//     else if(num1 == num2)
+//     {
+//         console.log(`${num1} e ${num2} sao iguais`);
+//     }
+// }
 
-EhMaior(num1,num2);
+// EhMaior(num1,num2);
+
+//arrays
+const frutas = ["maçã", "banana", "laranja"];
+console.log(frutas);
+console.log(frutas[1]);
+frutas[1] = "uva";
+console.log(frutas);
+console.log(frutas.length);
+// prop length = Tamanho / Quantidade de Itens
+
+frutas.push(1510, 15, 949);
+// fn push = Inserir elementos na última posição do array
+
+frutas.unshift("melancia");
+// fn unshif = Inserir elementos na primeira posição do array
+
+console.log(frutas);
+
+console.log(frutas.slice(2,4));
+// fn slice = Recorta a lista
