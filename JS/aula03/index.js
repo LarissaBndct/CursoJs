@@ -501,10 +501,16 @@
 // console.log(numeros.reduce(reduzirValores, 0))
 // // fn reduce - Reduzir a um único valor o nosso array.
 
-const valor1 = readline.question("Informe o primeiro valor ").toLowerCase();
-const valor2 = readline.question("Informe o segundo valor ").toLowerCase();
-const valor3 = readline.question("Informe o terceiro valor ").toLowerCase();
+// const valor1 = readline.question("Informe o primeiro valor ").toLowerCase();
+// const valor2 = readline.question("Informe o segundo valor ").toLowerCase();
+// const valor3 = readline.question("Informe o terceiro valor ").toLowerCase();
 
-const valores = [valor1,valor2,valor3];
+// const valores = [valor1,valor2,valor3];
 
-console.log(valores.filter(valor => valor.startsWith("m")));
+// console.log(valores.filter(valor => valor.startsWith("m")));
+
+const numeros = [ 8, 9, 12, 15, 27, 30, 33, 39, 40, 42, 58, 59, 60, 63, 65 ];
+console.log(numeros);
+console.log(numeros.filter( multiplo3 => multiplo3 % 3==0));
+console.log(numeros.filter( multiplo5 => multiplo5 % 5==0));
+console.log(numeros.filter( multiplo3e5 => (multiplo3e5 % 3==0) && (multiplo3e5 % 5 == 0)));
