@@ -451,53 +451,60 @@
 // console.log(frutas.slice(2,4));
 // // fn slice = Recorta a lista
 
-const feriados = [];
+// const feriados = [];
 
-feriados.push("carnaval");
-feriados.push("pascoa");
-feriados.push("Dia do trabalhador");
-feriados.push("Tiradentes");
+// feriados.push("carnaval");
+// feriados.push("pascoa");
+// feriados.push("Dia do trabalhador");
+// feriados.push("Tiradentes");
 
-console.log(feriados);
+// console.log(feriados);
 
-feriados.shift("pascoa");
-console.log(feriados);
-feriados.shift("Dia do trabalhador");
-//principais funcoes do array q nao deppendem de um callback
-const nome = "Juvenal Juvelino Juvenio de Souza";
-nome.toUpperCase(); // Transformar em Letras Maiúsculas
-nome.toLowerCase(); // Transformar em Letras Mínúsculas
-nome.length // Tamanho do texto.
-//nome.split(); // Dividir o texto em um Array.
-console.log(nome.startsWith("Ju")); // Começando com (Retorna true/false)
-console.log(nome.endsWith("za")); // Terminando com (Retorna true/false)
-console.log(nome.includes("Geronimo")); // Procura o texto no meio da frase
+// feriados.shift("pascoa");
+// console.log(feriados);
+// feriados.shift("Dia do trabalhador");
+// //principais funcoes do array q nao deppendem de um callback
+// const nome = "Juvenal Juvelino Juvenio de Souza";
+// nome.toUpperCase(); // Transformar em Letras Maiúsculas
+// nome.toLowerCase(); // Transformar em Letras Mínúsculas
+// nome.length // Tamanho do texto.
+// //nome.split(); // Dividir o texto em um Array.
+// console.log(nome.startsWith("Ju")); // Começando com (Retorna true/false)
+// console.log(nome.endsWith("za")); // Terminando com (Retorna true/false)
+// console.log(nome.includes("Geronimo")); // Procura o texto no meio da frase
 
-//cmo trabalhar arrays e callbacks 
+// //cmo trabalhar arrays e callbacks 
 
-const filtro = fruta => fruta.startsWith("ma");
-console.log(frutas);
-console.log(frutas.filter(filtro));
-console.log(frutas.filter(fruta => fruta.includes("ç")));
-// fn filter - Filtrar uma cópia do array baseado em condições estabelecidas no seu callback.
+// const filtro = fruta => fruta.startsWith("ma");
+// console.log(frutas);
+// console.log(frutas.filter(filtro));
+// console.log(frutas.filter(fruta => fruta.includes("ç")));
+// // fn filter - Filtrar uma cópia do array baseado em condições estabelecidas no seu callback.
 
-console.log(frutas.find(fruta => fruta.startsWith("m")));
-// fn find - Retorna o primeiro elemento que satisfaz a condição ou undefined
+// console.log(frutas.find(fruta => fruta.startsWith("m")));
+// // fn find - Retorna o primeiro elemento que satisfaz a condição ou undefined
 
-console.log(frutas.findIndex(fruta => fruta.startsWith("banana")));
-// fn findIndex - Retorna a posição do primeiro elemento que satisfaz a condição ou -1
+// console.log(frutas.findIndex(fruta => fruta.startsWith("banana")));
+// // fn findIndex - Retorna a posição do primeiro elemento que satisfaz a condição ou -1
 
-console.log(frutas.join(", "))
-// fn join - Juntar todas as partes do array através de uma cola.
+// console.log(frutas.join(", "))
+// // fn join - Juntar todas as partes do array através de uma cola.
 
-const numeros = [1,2,3,4];
-console.log(numeros.reduce((valorAnterior, valorAtual) => valorAnterior + valorAtual, 0))
-console.log(numeros.reduce(function (valorAnterior, valorAtual) { 
-    return valorAnterior + valorAtual;
-}, 0))
-const reduzirValores = function (valorAnterior, valorAtual) { 
-    return valorAnterior + valorAtual;
-}
-console.log(numeros.reduce(reduzirValores, 0))
-// fn reduce - Reduzir a um único valor o nosso array.
+// const numeros = [1,2,3,4];
+// console.log(numeros.reduce((valorAnterior, valorAtual) => valorAnterior + valorAtual, 0))
+// console.log(numeros.reduce(function (valorAnterior, valorAtual) { 
+//     return valorAnterior + valorAtual;
+// }, 0))
+// const reduzirValores = function (valorAnterior, valorAtual) { 
+//     return valorAnterior + valorAtual;
+// }
+// console.log(numeros.reduce(reduzirValores, 0))
+// // fn reduce - Reduzir a um único valor o nosso array.
 
+const valor1 = readline.question("Informe o primeiro valor ").toLowerCase();
+const valor2 = readline.question("Informe o segundo valor ").toLowerCase();
+const valor3 = readline.question("Informe o terceiro valor ").toLowerCase();
+
+const valores = [valor1,valor2,valor3];
+
+console.log(valores.filter(valor => valor.startsWith("m")));
