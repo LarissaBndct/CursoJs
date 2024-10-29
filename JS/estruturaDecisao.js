@@ -19,3 +19,6 @@ else
 {
     console.log("Maior de idade");
 }
+
+//if ternário é um if de uma linha só. Sua sintaxe é: <condição ? resposta se condição == true : resposta se condição == false;> :
+
