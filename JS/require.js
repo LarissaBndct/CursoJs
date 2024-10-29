@@ -5,4 +5,5 @@ essa ação será feita só uma vez
 const readline = require('readline-sync');
 
 var inserir = readline.question("Agora podemos pedir informacoes ao usuario, entendeu? ");
+//para somente mosrar algum dado ao usuário dentro do console utilizamos o console.log(): 
 console.log(inserir);
