@@ -4,7 +4,7 @@ function ehPrimo(numero) {
     if (numero <= 1) return "Não é primo";
 
     for (let contador = 2; contador <= Math.sqrt(numero); contador++) {
-        if (numero % contador === 0) {
+        if (numero % contador == 0) {
             return "não é primo";
         }
     }
