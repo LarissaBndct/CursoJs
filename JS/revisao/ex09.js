@@ -2,15 +2,7 @@
 const readline = require("readline-sync");
 function ehPrimo(num)
 {
-    if()
-    {
-        return "é primo";
-    }
-    else
-    {
-        return "não é primo";
-    }
-
+    return null
 }
 let numero = readline.questionInt("Informe um numero: ");
 console.log(`o numero ${numero} ${ehPrimo(numero)}`);
