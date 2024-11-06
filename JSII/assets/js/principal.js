@@ -12,6 +12,7 @@ $(document).ready(function() {
 
     $("#btnApagar").on('click', function() {
         alert('O usuário foi apagado')
+        $("#nomeUsuario").val("")
     });
 
 });
