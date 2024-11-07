@@ -1,0 +1,107 @@
+<h1>Minha lista de produtos</h1>
+
+<div class="row">
+    <div class="col text-right">
+        <a href="/novo-produto" class="btn btn-primary">Novo Produto</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th width="100px">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each produtos}}
+                    <tr>
+                        <td>{{this.id}}</td>
+                        <td>{{this.nome}}</td>
+                        <td>{{formatarPreco this.preco}}</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button data-id="{{this.id}}" type="button" class="btn btn-light btn-visualizar">Visualizar</button>
+                                <button data-id="{{this.id}}" type="button" class="btn btn-warning btn-editar">Editar</button>
+                                <button data-id="{{this.id}}" type="button" class="btn btn-danger btn-remover">Apagar</button>
+                            </div>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<!-- Modal de Exibir o Produto -->
+<div class="modal fade" id="produtoModal" tabindex="-1" aria-labelledby="produtoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="produtoModalLabel">Detalhes do Produto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>ID:</strong> <span id="produtoId"></span></p>
+        <p><strong>Nome:</strong> <span id="produtoNome"></span></p>
+        <p><strong>Preço:</strong> <span id="produtoPreco"></span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal de Confirmação de Exclusão -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmar Exclusão</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Tem certeza de que deseja excluir este produto?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" id="confirmDeleteButton">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Edição de Produto -->
+<div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editProductModalLabel">Editar Produto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="editProductForm">
+          <input type="hidden" id="editProductId" name="id"> <!-- Armazena o ID do produto -->
+          <div class="mb-3">
+            <label for="editProductName" class="form-label">Nome do Produto</label>
+            <input type="text" class="form-control" id="editProductName" name="nome" required>
+          </div>
+          <div class="mb-3">
+            <label for="editProductPrice" class="form-label">Preço do Produto</label>
+            <input type="number" class="form-control" id="editProductPrice" name="preco" required min="0.01" step="0.01">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" id="saveEditButton">Salvar Alterações</button>
+      </div>
+    </div>
+  </div>
+</div>
