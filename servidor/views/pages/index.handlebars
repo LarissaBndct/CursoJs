@@ -94,13 +94,17 @@
           </div>
           <div class="mb-3">
             <label for="editProductPrice" class="form-label">Preço do Produto</label>
-            <input type="number" class="form-control" id="editProductPrice" name="preco" required min="0.01" step="0.01">
+            <div class="input-group mb-3">
+              <span class="input-group-text">R$</span>
+              <input type="number" class="form-control" id="editProductPrice" name="preco" required min="1" step="1">
+              <span class="input-group-text">,00</span>
+            </div>
           </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" id="saveEditButton">Salvar Alterações</button>
+        <button type="button" class="btn btn-success" id="saveEditButton">Salvar Alterações</button>
       </div>
     </div>
   </div>
